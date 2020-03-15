@@ -8,11 +8,13 @@ Archecture - 1 hour
   3. BDC Architecture review - 30 mins
   
 Setup Procedure - 1 hour
+
   4. how to build your own demo on Azure - 20 mins
   5. break 15 mins
   6. basic administrative tasks with BDC - 20 mins
   
 Using it - 1 hour
+
   7. loading data into BDC - 20 mins
   8. notebook query BDC and review query perf - 20 mins
   9. BDC interact with Azure Data platform - ADLSgen2 and Cosmos DB - 20 mins
