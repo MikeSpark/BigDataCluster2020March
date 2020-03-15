@@ -2,10 +2,10 @@
 
 What we go through today?
 
-**Archecture - 1 hour**
-  1. k8s 101 - 20 mins
+**Archecture - 40 mins**
+  1. k8s 101 - 10 mins
   2. Spark & HDFS introduction - 10 mins
-  3. BDC Architecture review - 30 mins
+  3. BDC Architecture review - 10 mins
   
 **Setup Procedure - 1 hour**
 
