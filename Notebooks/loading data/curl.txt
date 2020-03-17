@@ -1,0 +1,31 @@
+**** Remind partners that the script has typo that makes upload to HDFS fail, if DEFINED AZDATA_PASSWORD set KNOX_PASSWORD=%AZDATA_PASSWORD% ****
+
+curl -o bootstrap-sample-db.cmd "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/bootstrap-sample-db.cmd"
+curl -o bootstrap-sample-db.sql "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/bootstrap-sample-db.sql"
+
+set AZDATA_USERNAME=dbadmin
+set AZDATA_PASSWORD=
+
+.\bootstrap-sample-db.cmd mssql-cluster 52.139.168.120 52.139.168.178
+
+C:\bdc>.\bootstrap-sample-db.cmd mssql-cluster 52.139.168.120 52.139.168.178
+Verifying sqlcmd.exe is in path
+Verifying bcp.exe is in path
+Verifying kubectl.exe is in path
+Verifying curl.exe is in path
+Copying sales database backup file to SQL Master instance...
+Configuring sample database(s)...
+Removing database backup file...
+removed '/var/opt/mssql/data/tpcxbb_1gb.bak'
+Exporting web_clickstreams data...
+Exporting inventory data...
+Exporting customer data...
+Exporting product_reviews data...
+Uploading web_clickstreams data to HDFS...
+
+Uploading product_reviews data to HDFS...
+.
+Bootstrap of the sample database completed successfully.
+Data files for Oracle setup are located at [C:\Users\chunchan\AppData\Local\Temp\bootstrap-sample-db.cmd].
+
+C:\bdc>

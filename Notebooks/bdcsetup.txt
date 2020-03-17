@@ -1,0 +1,51 @@
+az aks get-credentials --resource-group=DemoRG --name bdcaks
+kubectl get nodes
+kubectl config view
+
+52.139.171.85:30080
+
+Starting cluster deployment.
+Waiting for cluster controller to start.
+Waiting for cluster controller to start.
+Waiting for cluster controller to start.
+Waiting for cluster controller to start.
+Waiting for cluster controller to start.
+Cluster controller endpoint is available at 52.139.171.85:30080.
+Cluster control plane is ready.
+Data pool is ready.
+Storage pool is ready.
+Master pool is ready.
+Compute pool is ready.
+Cluster deployed successfully.
+
+
+kubectl get svc controller-svc-external -n mssql-cluster
+
+
+azdata login --endpoint https://52.139.171.85:30080 --username dbadmin
+
+kubectl get svc -n mssql-cluster
+
+
+
+=============================
+Info
+=============================
+Follow this:
+https://docs.microsoft.com/en-us/sql/big-data-cluster/deployment-guidance?view=sql-server-ver15
+
+Machine type:
+D16s v3, EastAsia
+
+Further study:
+https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters
+
+Application Sample
+https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/app-deploy
+
+
+kubectl get svc controller-svc-external -n mssql-cluster
+
+
+azdata bdc hdfs mount create --remote-uri abfs://adlscontainer@mcdemoadls.dfs.core.windows.net/ --mount-path /mounts/iotdevkit
+azdata bdc hdfs mount status
